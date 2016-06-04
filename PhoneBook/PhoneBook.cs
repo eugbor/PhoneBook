@@ -63,7 +63,7 @@ namespace PhoneBook
         {
             Console.WriteLine("Введите фамилию абонента для поиска:");
             string lastName = Console.ReadLine();
-            var search = phoneBookItems.Where(e => e.lastName == lastName);
+            var search = phoneBookItems.Where(e => e.lastName.ToLower() == lastName.ToLower());
             Console.WriteLine("Результаты поиска:");
 
             if (search != null)

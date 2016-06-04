@@ -16,7 +16,7 @@
 3:Добавить новый контакт
 4:Удалить запись по номеру
 5:Распечатать список
-6:выход");
+6:Выход");
                 int.TryParse(Console.ReadLine(), out command);
                 switch (command)
                 {
@@ -39,10 +39,7 @@
                         Console.WriteLine("Вводите значения от 1 до 6:");
                         break;
                 }
-
             } while (command != (int)Actions.Exit);
         }
-
-        
     }
 }
