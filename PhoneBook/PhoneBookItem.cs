@@ -15,7 +15,7 @@ namespace PhoneBook
 
         public override string ToString()
         {
-            return String.Format("Абонент по имени: {0} {1},зарегистрирован за номером: {2}", firstName, lastName, Number);
+            return $"Абонент по имени: {firstName} {lastName},зарегистрирован за номером: {Number}";
         }
         public PhoneBookItem(int number, string firstName, string lastName)
         {
@@ -23,10 +23,12 @@ namespace PhoneBook
             this.firstName = firstName;
             this.lastName = lastName;
         }
+        // determines whether the item is part of the list
         public bool Findname(PhoneBookItem sp)
         {
             return sp.lastName.Contains(lastName);
         }
+        // determines if the number matches
         public bool Findnumber(PhoneBookItem sp)
         {
             return sp.Number == Number;
